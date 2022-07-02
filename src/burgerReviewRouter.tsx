@@ -1,19 +1,19 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import BurgerLogic from './components/burgerLogic';
-import BurgerAction from './burgerAction';
-import BurgerComponent from './components/burgerComponent';
+import BurgerReviewLogic from './components/burgerReviewLogic';
+import BurgerReviewAction from './burgerReviewAction';
+import BurgerReviewComponent from './components/burgerReview';
 import NavBar from '../shared/component/navBar/navBar';
 
-const burgerAction = new BurgerAction();
-const burgerLogic = new BurgerLogic(burgerAction);
+const burgerReviewAction = new BurgerReviewAction();
+const burgerReviewLogic = new BurgerReviewLogic(burgerReviewAction);
 
 interface Properties {
   title: string;
   version: string;
 }
 
-const Routing: React.FC<Properties> = (props) => {
+const BurgerReviewRouting: React.FC<Properties> = (props) => {
   return (
     <BrowserRouter>
       <main>
@@ -22,10 +22,10 @@ const Routing: React.FC<Properties> = (props) => {
           <Route
             path='/'
             element={
-              <BurgerComponent
+              <BurgerReviewComponent
                 title={props.title}
                 version={props.version}
-                burgerLogic={burgerLogic}
+                burgerLogic={burgerReviewLogic}
               />
             }
           />
@@ -35,4 +35,4 @@ const Routing: React.FC<Properties> = (props) => {
   );
 };
 
-export default Routing;
+export default BurgerReviewRouting;

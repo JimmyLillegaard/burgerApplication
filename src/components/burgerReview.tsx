@@ -1,19 +1,18 @@
-import BurgerAction from '@src/burgerAction';
-import React, { useState } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../shared/style/burgerApp.less';
-import BurgerLogic from './burgerLogic';
-import BurgerTable from './burgerTable/burgerTable';
+import BurgerReviewLogic from './burgerReviewLogic';
+import BurgerReviewTable from './burgerReviewTable/burgerReviewTable';
 import NewBurgerReview from './newBurgerReview/newBurgerReview';
 
 type Props = {
   title: string;
   version: string;
-  burgerLogic: BurgerLogic;
+  burgerLogic: BurgerReviewLogic;
 };
 
-const BurgerComponent: React.FC<Props> = (props) => {
+const BurgerReview: React.FC<Props> = (props) => {
   return (
     <>
       <div className='row'>
@@ -33,11 +32,11 @@ const BurgerComponent: React.FC<Props> = (props) => {
           </div>
         </div>
         <div className='col'>
-          <BurgerTable burgertableLogic={props.burgerLogic.burgerTableLogic} />
+          <BurgerReviewTable burgertableLogic={props.burgerLogic.burgerReviewTableLogic} />
         </div>
       </div>
     </>
   );
 };
 
-export default hot(module)(BurgerComponent);
+export default hot(module)(BurgerReview);

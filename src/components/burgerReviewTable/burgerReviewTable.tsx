@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import BurgerTableLogic from './burgerTableLogic';
-import { BurgerReview } from '@src/types/burgerTypes';
+import BurgerReviewTableLogic from './burgerReviewTableLogic';
+import { BurgerReview } from '@src/types/burgerReviewTypes';
 
 interface Property {
-  burgertableLogic: BurgerTableLogic;
+  burgertableLogic: BurgerReviewTableLogic;
 }
 
 const BurgerTable: React.FC<Property> = (props) => {

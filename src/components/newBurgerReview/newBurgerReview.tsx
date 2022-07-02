@@ -1,4 +1,4 @@
-import { BurgerReview } from '@src/types/burgerTypes';
+import { BurgerReview } from '@src/types/burgerReviewTypes';
 import { Image } from 'primereact/image';
 import { Button } from 'primereact/button';
 import React from 'react';

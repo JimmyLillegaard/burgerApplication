@@ -1,7 +1,7 @@
-import { BurgerReview, Burger } from '@src/types/burgerTypes';
+import { BurgerReview } from '@src/types/burgerReviewTypes';
 import { generateUUID } from '../../shared/utils/guidUtility';
 
-export default class BurgerService {
+export default class BurgerReviewService {
   getSingleBurgerReviewRequest = (burgerReviewId: string) => {
     const singleBurgerReview: BurgerReview = mockData()[3];
     return singleBurgerReview;
