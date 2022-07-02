@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import BurgerReviewLogic from './components/burgerReviewLogic';
 import BurgerReviewAction from './burgerReviewAction';
-import BurgerReviewComponent from './components/burgerReview';
+import BurgerReview from './components/burgerReview';
 import NavBar from '../shared/component/navBar/navBar';
 
 const burgerReviewAction = new BurgerReviewAction();
@@ -22,10 +22,10 @@ const BurgerReviewRouting: React.FC<Properties> = (props) => {
           <Route
             path='/'
             element={
-              <BurgerReviewComponent
+              <BurgerReview
                 title={props.title}
                 version={props.version}
-                burgerLogic={burgerReviewLogic}
+                burgerReviewLogic={burgerReviewLogic}
               />
             }
           />

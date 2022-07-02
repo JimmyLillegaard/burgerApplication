@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import BurgerReviewTableLogic from './burgerReviewTableLogic';
 import { BurgerReview } from '@src/types/burgerReviewTypes';
 
 interface Property {
-  burgertableLogic: BurgerReviewTableLogic;
+  allBurgerReviews: BurgerReview[];
 }
 
 const BurgerTable: React.FC<Property> = (props) => {
@@ -45,14 +44,14 @@ const BurgerTable: React.FC<Property> = (props) => {
   const header = <div className='burger-table-header'>Burger Reviews</div>;
 
   const footer = `In total there are ${
-    props.burgertableLogic.allBurgerReviews ? props.burgertableLogic.allBurgerReviews.length : 0
+    props.allBurgerReviews ? props.allBurgerReviews.length : 0
   } burger reviews.`;
 
   return (
     <div className='burgerReviewTable'>
       <div className='card'>
         <DataTable
-          value={props.burgertableLogic.allBurgerReviews}
+          value={props.allBurgerReviews}
           header={header}
           footer={footer}
           responsiveLayout='scroll'

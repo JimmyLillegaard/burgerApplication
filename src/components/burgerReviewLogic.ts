@@ -1,20 +1,23 @@
 import BurgerReviewAction from '@src/burgerReviewAction';
 import { BurgerReview } from '@src/types/burgerReviewTypes';
-import BurgerReviewTableLogic from './burgerReviewTable/burgerReviewTableLogic';
 
 export default class BurgerLogic {
   burgerReviewActions: BurgerReviewAction;
-  burgerReviewTableLogic: BurgerReviewTableLogic;
   newBurgerReview: BurgerReview = undefined;
+  allBurgerReviews: BurgerReview[];
 
   constructor(burgerReviewActions: BurgerReviewAction) {
     this.burgerReviewActions = burgerReviewActions;
-    this.burgerReviewTableLogic = new BurgerReviewTableLogic(burgerReviewActions);
     this.setNewestBurgerReview();
+    this.setAllBurgerReviews();
   }
 
   setNewestBurgerReview = () => {
     const newBurgerReview: BurgerReview = this.burgerReviewActions.getNewestBurgerReview();
     this.newBurgerReview = newBurgerReview;
+  };
+
+  setAllBurgerReviews = () => {
+    this.allBurgerReviews = this.burgerReviewActions.getAllBurgerReviews();
   };
 }

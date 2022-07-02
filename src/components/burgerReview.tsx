@@ -2,14 +2,14 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../../shared/style/burgerApp.less';
-import BurgerReviewLogic from './burgerReviewLogic';
 import BurgerReviewTable from './burgerReviewTable/burgerReviewTable';
 import NewBurgerReview from './newBurgerReview/newBurgerReview';
+import BurgerReviewLogic from './burgerReviewLogic';
 
 type Props = {
   title: string;
   version: string;
-  burgerLogic: BurgerReviewLogic;
+  burgerReviewLogic: BurgerReviewLogic;
 };
 
 const BurgerReview: React.FC<Props> = (props) => {
@@ -25,14 +25,14 @@ const BurgerReview: React.FC<Props> = (props) => {
             </p>
           </div>
           <div className='row'>
-            <NewBurgerReview burgerReview={props.burgerLogic.newBurgerReview} />
+            <NewBurgerReview burgerReview={props.burgerReviewLogic.newBurgerReview} />
           </div>
           <div className='row'>
             <div className='googleMapsArea'>Google Maps</div>
           </div>
         </div>
         <div className='col'>
-          <BurgerReviewTable burgertableLogic={props.burgerLogic.burgerReviewTableLogic} />
+          <BurgerReviewTable allBurgerReviews={props.burgerReviewLogic.allBurgerReviews} />
         </div>
       </div>
     </>
