@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-interface Properties {}
+interface Properties {
+  mainTitle: string;
+  loginTitle: string;
+  newUserTitle: string;
+}
 
 const NavBar: React.FC<Properties> = (props) => {
   return (
@@ -10,17 +14,17 @@ const NavBar: React.FC<Properties> = (props) => {
         <div className='row navRow'>
           <div className='col'>
             <div className='main-heading'>
-              <h1>The Burger Reviewer</h1>
+              <h1>{props.mainTitle}</h1>
             </div>
           </div>
           <div className='col'></div>
           <div className='col'></div>
           <div className='col'>
             <Link to='/register' className='pe-2'>
-              New user
+              {props.newUserTitle}
             </Link>
             <Link to='/login' className='pe-2'>
-              Login
+              {props.loginTitle}
             </Link>
           </div>
         </div>

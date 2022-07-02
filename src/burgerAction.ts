@@ -11,4 +11,9 @@ export default class BurgerAction {
     const newBurgerReview: BurgerReview = this.burgerService.getNewestBurgerReviewRequest();
     return newBurgerReview;
   };
+
+  getAllBurgerReviews = () => {
+    const allBurgerReviews: BurgerReview[] = this.burgerService.getAllBurgerReviewsRequest();
+    return allBurgerReviews;
+  };
 }

@@ -12,6 +12,11 @@ export default class BurgerService {
     return newestBurgerReview;
   };
 
+  getAllBurgerReviewsRequest = () => {
+    const allBurgerReviews: BurgerReview[] = mockData();
+    return allBurgerReviews;
+  };
+
   updateBurgerReviewRequest = (burgerReview: BurgerReview) => {};
 
   deleteBurgerReviewRequest = (burgerReview: BurgerReview) => {};
@@ -33,9 +38,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
@@ -59,9 +62,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
@@ -85,9 +86,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
@@ -111,9 +110,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
@@ -137,9 +134,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
@@ -163,9 +158,7 @@ export const mockData = () => {
       burger: {
         id: generateUUID(),
         name: 'Bacon Burger',
-        pictures: [
-          'http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg',
-        ],
+        pictures: ['http://bellaitaliapizzaria.dk/wp-content/uploads/2019/12/Burger-600x600.jpg'],
         price: 90,
       },
       review: {
