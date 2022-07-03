@@ -1,8 +1,9 @@
 import BurgerReviewService from './service/burgerReviewService';
-import { BurgerReview } from './types/burgerReviewTypes';
+import { BurgerReview } from './types/burgerReviewType';
 
-export default class BurgerReviewAction {
+export default class BurgerAction {
   burgerReviewService: BurgerReviewService;
+
   constructor() {
     this.burgerReviewService = new BurgerReviewService();
   }

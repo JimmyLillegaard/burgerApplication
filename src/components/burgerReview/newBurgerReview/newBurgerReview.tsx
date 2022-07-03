@@ -1,4 +1,4 @@
-import { BurgerReview } from '@src/types/burgerReviewTypes';
+import { BurgerReview } from '@src/types/burgerReviewType';
 import { Image } from 'primereact/image';
 import { Button } from 'primereact/button';
 import React from 'react';
@@ -30,13 +30,17 @@ const NewBurgerReview: React.FC<Property> = (props) => {
             <div className='col'>
               {' '}
               {props.burgerReview.burgerResturant.streetName} {' - '}
-              {props.burgerReview.burgerResturant.streetnumber}
+              {props.burgerReview.burgerResturant.streetNumber}
               <br />
               {props.burgerReview.burgerResturant.town}
             </div>
             <div className='col'>
               <Button icon='pi-globe' className='p-button-rounded' title='Show in map' />
             </div>
+          </div>
+          <div className='row'>
+            <div className='col-4'>Open:</div>
+            <div className='col'>{props.burgerReview.burgerResturant.openTime}</div>
           </div>
           <br />
           <br />

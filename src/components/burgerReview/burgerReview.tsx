@@ -1,7 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../../shared/style/burgerApp.less';
+
 import BurgerReviewTable from './burgerReviewTable/burgerReviewTable';
 import NewBurgerReview from './newBurgerReview/newBurgerReview';
 import BurgerReviewLogic from './burgerReviewLogic';

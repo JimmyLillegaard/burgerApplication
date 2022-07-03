@@ -1,19 +1,20 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import BurgerReviewLogic from './components/burgerReviewLogic';
-import BurgerReviewAction from './burgerReviewAction';
-import BurgerReview from './components/burgerReview';
+import BurgerLogic from './components/burgerReview/burgerReviewLogic';
+import BurgerAction from './burgerAction';
+import BurgerReview from './components/burgerReview/burgerReview';
 import NavBar from '../shared/component/navBar/navBar';
+import BurgerLogin from './components/burgerLogin/burgerLogin';
 
-const burgerReviewAction = new BurgerReviewAction();
-const burgerReviewLogic = new BurgerReviewLogic(burgerReviewAction);
+const burgerAction = new BurgerAction();
+const burgerLogic = new BurgerLogic(burgerAction);
 
 interface Properties {
   title: string;
   version: string;
 }
 
-const BurgerReviewRouting: React.FC<Properties> = (props) => {
+const BurgerRouter: React.FC<Properties> = (props) => {
   return (
     <BrowserRouter>
       <main>
@@ -25,14 +26,16 @@ const BurgerReviewRouting: React.FC<Properties> = (props) => {
               <BurgerReview
                 title={props.title}
                 version={props.version}
-                burgerReviewLogic={burgerReviewLogic}
+                burgerReviewLogic={burgerLogic}
               />
             }
           />
+          <Route path='/login' element={<BurgerLogin newUser={false} />} />
+          <Route path='/register' element={<BurgerLogin newUser={true} />} />
         </Routes>
       </main>
     </BrowserRouter>
   );
 };
 
-export default BurgerReviewRouting;
+export default BurgerRouter;

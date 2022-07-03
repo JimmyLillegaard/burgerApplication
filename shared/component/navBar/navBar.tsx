@@ -14,7 +14,9 @@ const NavBar: React.FC<Properties> = (props) => {
         <div className='row navRow'>
           <div className='col'>
             <div className='main-heading'>
-              <h1>{props.mainTitle}</h1>
+              <Link to='/' className='pe-2'>
+                <h1>{props.mainTitle}</h1>
+              </Link>
             </div>
           </div>
           <div className='col'></div>

@@ -26,5 +26,6 @@ export interface BurgerResturant {
   name: string;
   town: string;
   streetName: string;
-  streetnumber: string;
+  streetNumber: string;
+  openTime: string;
 }

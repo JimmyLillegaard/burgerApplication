@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { BurgerReview } from '@src/types/burgerReviewTypes';
+import { BurgerReview } from '@src/types/burgerReviewType';
 
 interface Property {
   allBurgerReviews: BurgerReview[];

@@ -1,4 +1,4 @@
-import { BurgerReview } from '@src/types/burgerReviewTypes';
+import { BurgerReview } from '@src/types/burgerReviewType';
 import { generateUUID } from '../../shared/utils/guidUtility';
 
 export default class BurgerReviewService {
@@ -32,8 +32,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),
@@ -56,8 +57,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),
@@ -80,8 +82,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),
@@ -104,8 +107,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),
@@ -128,8 +132,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),
@@ -152,8 +157,9 @@ export const mockData = () => {
         id: generateUUID(),
         name: 'Bella Italia',
         streetName: 'Amagerlandevej',
-        streetnumber: '180',
+        streetNumber: '180',
         town: '2770 Kastrup',
+        openTime: '11:00 to 22:00',
       },
       burger: {
         id: generateUUID(),

@@ -1,12 +1,12 @@
-import BurgerReviewAction from '@src/burgerReviewAction';
-import { BurgerReview } from '@src/types/burgerReviewTypes';
+import BurgerAction from '@src/burgerAction';
+import { BurgerReview } from '@src/types/burgerReviewType';
 
 export default class BurgerLogic {
-  burgerReviewActions: BurgerReviewAction;
+  burgerReviewActions: BurgerAction;
   newBurgerReview: BurgerReview = undefined;
   allBurgerReviews: BurgerReview[];
 
-  constructor(burgerReviewActions: BurgerReviewAction) {
+  constructor(burgerReviewActions: BurgerAction) {
     this.burgerReviewActions = burgerReviewActions;
     this.setNewestBurgerReview();
     this.setAllBurgerReviews();
