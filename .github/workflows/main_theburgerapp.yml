@@ -23,9 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+          yarn install
+          yarn run build 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -53,4 +52,4 @@ jobs:
           app-name: 'theBurgerApp'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3FA290A6E23148F1A52EDCE9A8DCF96A }}
-          package: .
+          package: ./dist/
